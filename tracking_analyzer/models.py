@@ -39,7 +39,7 @@ class Tracker(models.Model):
     ip_country = CountryField(blank=True)
     ip_region = models.CharField(max_length=255, blank=True)
     ip_city = models.CharField(max_length=255, blank=True)
-    referrer = models.URLField(blank=True)
+    referrer = models.URLField(max_length=1024, blank=True)
     device_type = models.CharField(
         max_length=10, choices=DEVICE_TYPE, default=UNKNOWN)
     device = models.CharField(max_length=30, blank=True)
